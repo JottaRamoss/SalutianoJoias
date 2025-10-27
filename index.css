@@ -1,0 +1,645 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    background-color: #534d3173;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==== HEADER ==== */
+.main-header {
+    background: #534d3173;
+    border-bottom: 1px solid #ffffff;
+    padding: 1rem 0;
+    position: relative;
+    top: 0;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: baseline;
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin: 0;
+    color: #222;
+}
+
+.logo span {
+    display: block;
+    font-size: 0.9rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* NAV */
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    transition: right 0.3s ease-in-out;
+}
+
+.main-nav a {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.main-nav a.active {
+    color: #c69c6d;
+}
+
+.main-nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #c69c6d;
+    transition: width .3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.main-nav a:hover {
+    color: #c69c6d;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* CATEGORIES */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 4rem 5%;
+}
+
+.category-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.category-card:hover img {
+    transform: scale(1.1);
+}
+
+.category-overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.category-overlay h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+}
+
+.category-overlay a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #b29477;
+}
+
+/* FEATURED PRODUCTS */
+.featured-collection {
+    padding: 4rem 5%;
+    background: #534d3173;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.products-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.product-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* NOVO: Flexbox para alinhamento uniforme */
+    display: flex; 
+    flex-direction: column;
+    height: 480px; /* Altura fixa para uniformidade */
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    /* Altura fixa para a imagem */
+    height: 60%; 
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 1rem;
+    text-align: center;
+    /* NOVO: Permite que o info preencha o restante espaço e empurre o botão para baixo */
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.product-info h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.price {
+    display: block;
+    color: #b29477;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.product-button {
+    display: inline-block;
+    background: #b29477;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Garantir que o botão está sempre no mesmo lugar */
+    margin-top: auto; 
+}
+
+.product-button:hover {
+    background: #a38466;
+    transform: scale(1.05);
+}
+
+/* COLLECTIONS (ESTILO ANTIGO - MANTIDO COMENTADO) */
+/* .collections-section {
+    padding: 4rem 5%;
+}
+
+.collections-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.collection-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collection-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.collection-card img {
+    width: 100%;
+    display: block;
+}
+
+.collection-info {
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.collection-info h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.collection-button {
+    margin-top: 0.8rem;
+    display: inline-block;
+    background: #b29477;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.collection-button:hover {
+    background-color: #a38466;
+    transform: scale(1.05);
+} */
+
+/* NEWSLETTER */
+.newsletter {
+    background: #f2f2f2;
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+.newsletter-content h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-content form {
+    margin-top: 1rem;
+}
+
+.newsletter-content input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: 250px;
+    max-width: 80%;
+    margin-right: 0.5rem;
+}
+
+.newsletter-content button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: #b29477;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.newsletter-content button:hover {
+    background: #a38466;
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+.main-footer {
+    background: #222;
+    color: #eee;
+    font-size: 0.9rem;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 3rem 5%;
+}
+
+.footer-column h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: #eee;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #b29477;
+}
+
+.social-icons a {
+    color: #eee;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #b29477;
+}
+
+.footer-bottom {
+    background: #111;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #333;
+}
+
+.payment-methods img {
+    height: 25px;
+    width: auto;
+    margin-left: 0.5rem;
+}
+
+/* BOTÃO HAMBURGUER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.is-active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.is-active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 1.5rem;
+        transition: right 0.3s ease;
+        box-shadow: -3px 0 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .main-nav.nav-open {
+        right: 0;
+    }
+
+    body.no-scroll {
+        overflow: hidden;
+    }
+}
+
+/* Botão do WhatsApp Flutuante */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+    transition: all 0.3s ease;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+.whatsapp-float i {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-icons a {
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.cart-count {
+    background-color: #333;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+}
+
+/* CTA Button (mantido para compatibilidade) */
+.cta-button {
+    background-color: #b29477;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #a38466;
+    transform: scale(1.05);
+}
+
+/* ======================================= */
+/* COLEÇÕES - NOVO ESTILO (IMAGEM COMPLETA E DETALHES) */
+/* ======================================= */
+
+.collections-showcase {
+    display: flex;
+    gap: 1.5rem;
+    padding: 4rem 5%;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.showcase-collection-card {
+    flex: 1 1 30%; 
+    max-width: 380px;
+    background-color: white; /* GARANTINDO O FUNDO BRANCO NO CARTÃO */
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showcase-collection-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* NOVO: Estilos para a área da imagem sem texto sobreposto */
+.collection-image {
+    height: 380px; /* Altura da área de imagem */
+    background-size: cover;
+    background-position: center;
+    /* Retiramos todas as camadas de texto e gradiente daqui */
+}
+
+/* Imagens de Fundo */
+.wave-bg {
+    background-image: url('img/coleçao%20wave.png'); 
+}
+.fossil-bg {
+    background-image: url('img/coleçao%20fossil.png');
+}
+.nativa-bg {
+    background-image: url('img/coleçao%20nativa.png');
+}
+
+/* Estilos para a secção de detalhes sob a imagem (A PARTE BRANCA) */
+.collection-details {
+    background-color: white; 
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.collection-details .collection-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.collection-details .collection-description-bottom {
+    margin-bottom: 1rem;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Botão no estilo da imagem */
+.collection-button-style-2 {
+    display: inline-block;
+    background: #b29477;
+    color: white;
+    padding: 0.7rem 2rem;
+    border-radius: 5px; 
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.collection-button-style-2:hover {
+    background-color: #a38466;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .showcase-collection-card {
+        flex: 1 1 45%; 
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .showcase-collection-card {
+        flex: 1 1 100%; 
+    }
+    .collection-image {
+        height: 300px;
+    }
+}

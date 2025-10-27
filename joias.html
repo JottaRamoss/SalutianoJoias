@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joias - Salutiano Joias</title>
+  <link rel="stylesheet" href="joias.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="icon" href="img/favicon-32x32-removebg-preview.png">
+</head>
+<body>
+
+  <!-- HEADER (igual ao index.html) -->
+  <header class="main-header">
+    <section class="container">
+      <section class="logo">
+        <h1>Salutiano</h1>
+        <span>Joias</span>
+      </section>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="joias.html" class="active">Joias</a>
+        <a href="colecoes.html">Coleções</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre Nós</a>
+      </nav>
+      <button class="hamburger" aria-label="Abrir menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <section class="header-icons">
+        <a href="#"><i class="fas fa-search"></i></a>
+        <a href="#"><i class="fas fa-shopping-bag"></i></a>
+        <span class="cart-count">0</span>
+      </section>
+    </section>
+  </header>
+
+  <!-- BANNER COM IMAGEM DE FUNDO -->
+  <section class="page-banner">
+    <section class="banner-content">
+      <h1>NOSSAS JOIAS</h1>
+      <p>Peças únicas que contam histórias</p>
+    </section>
+  </section>
+
+  <!-- FILTRO -->
+  <section class="product-filter">
+    <section class="filter-options">
+      <select name="category" id="category">
+        <option value="">Todas as Categorias</option>
+        <option value="aneis">Anéis</option>
+        <option value="colares">Colares</option>
+        <option value="brincos">Brincos</option>
+        <option value="pulseiras">Pulseiras</option>
+      </select>
+      <select name="material" id="material">
+        <option value="">Todos os Materiais</option>
+        <option value="ouro">Ouro 18k</option>
+        <option value="prata">Prata 925</option>
+      </select>
+      <select name="price" id="price">
+        <option value="">Faixa de Preço</option>
+        <option value="1">Até R$ 2.000</option>
+        <option value="2">R$ 2.000 - R$ 5.000</option>
+        <option value="3">Acima de R$ 5.000</option>
+      </select>
+      <button class="filter-button">FILTRAR</button>
+    </section>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="all-products">
+    <header class="section-header">
+      <h2>CATÁLOGO COMPLETO</h2>
+      <p>Explore nossa seleção de joias finas</p>
+    </header>
+
+    <section class="products-grid">
+      <article class="product-card">
+        <img src="img/anel%20duo.jpg" alt="Anel Duo" />
+        <section class="product-info">
+          <h3>Anel Duo</h3>
+          <p>Ouro 18k com Pérolas</p>
+          <span class="price">R$ 7.200,00</span>
+          <a href="#" class="product-button">COMPRAR</a>
+        </section>
+      </article>
+
+      <article class="product-card">
+        <img src="img/anel%20bamboo.jpeg" alt="Anel Bamboo" />
+        <section class="product-info">
+          <h3>Anel Bamboo</h3>
+          <p>Prata 925 com Safira</p>
+          <span class="price">R$ 2.850,00</span>
+          <a href="#" class="product-button">COMPRAR</a>
+        </section>
+      </article>
+
+      <article class="product-card">
+        <img src="img/brinco-remo.jpg" alt="Brincos Remo" />
+        <section class="product-info">
+          <h3>Brincos Remo</h3>
+          <p>Ouro 18k com Diamantes</p>
+          <span class="price">R$ 5.600,00</span>
+          <a href="#" class="product-button">COMPRAR</a>
+        </section>
+      </article>
+
+      <article class="product-card">
+        <img src="img/colar%20prancha.jpg" alt="Colar Prancha" />
+        <section class="product-info">
+          <h3>Colar Prancha</h3>
+          <p>Ouro 18k com Diamantes</p>
+          <span class="price">R$ 12.800,00</span>
+          <a href="#" class="product-button">COMPRAR</a>
+        </section>
+      </article>
+    </section>
+
+    <!-- PAGINAÇÃO -->
+    <section class="pagination">
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#"><i class="fas fa-chevron-right"></i></a>
+    </section>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <section class="newsletter-content">
+      <h2>ASSINE NOSSA NEWSLETTER</h2>
+      <p>Receba lançamentos exclusivos e convites para eventos</p>
+      <form>
+        <input type="email" placeholder="Seu melhor e-mail">
+        <button type="submit">ASSINAR</button>
+      </form>
+    </section>
+  </section>
+
+  <!-- FOOTER (igual ao index.html) -->
+  <footer class="main-footer">
+    <section class="footer-top">
+      <section class="footer-column">
+        <h3>INFORMAÇÕES</h3>
+        <ul>
+          <li><a href="#">Sobre Nós</a></li>
+          <li><a href="#">Nossas Lojas</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Trabalhe Conosco</a></li>
+        </ul>
+      </section>
+      <section class="footer-column">
+        <h3>ATENDIMENTO</h3>
+        <ul>
+          <li><a href="#">Dúvidas Frequentes</a></li>
+          <li><a href="#">Trocas e Devoluções</a></li>
+          <li><a href="#">Formas de Pagamento</a></li>
+          <li><a href="#">Entrega e Frete</a></li>
+        </ul>
+      </section>
+      <section class="footer-column">
+        <h3>CONTATO</h3>
+        <ul>
+          <li><i class="fas fa-phone"></i> (11) 4004-2020</li>
+          <li><i class="fas fa-envelope"></i> contato@luxjoias.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo</li>
+        </ul>
+      </section>
+      <section class="footer-column">
+        <h3>REDES SOCIAIS</h3>
+        <section class="social-icons">
+          <a href="https://www.instagram.com/abnersalutianojoias/" target="_blank" rel="external"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/abnersalutianojoias/" target="_blank" rel="external"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="https://www.youtube.com/@abnersalutiano49" target="_blank" rel="external"><i class="fab fa-youtube"></i></a>
+        </section>
+      </section>
+    </section>
+    <section class="footer-bottom">
+      <p>© 2025 Salutiano Joias. Todos os direitos reservados.</p>
+      <section class="payment-methods">
+        <img src="img/visa%20cartao.png" alt="Visa">
+        <img src="img/mastercard%20cartao.png" alt="Mastercard">
+        <img src="img/elo%20cartao.png" alt="elo">
+        <img src="img/logo%20pix.png" alt="Pix">
+      </section>
+    </section>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <a href="https://api.whatsapp.com/send?phone=5521981389626" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</body>
+</html>

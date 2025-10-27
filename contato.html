@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Salutiano Joias</title>
+    <link rel="stylesheet" href="contato.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/favicon-32x32-removebg-preview.png">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Salutiano</h1>
+                <span>Joias</span>
+            </div>
+                    <button class="hamburger" aria-label="Abrir menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        </button>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="joias.html">Joias</a>
+                <a href="colecoes.html">Coleções</a>
+                <a href="cursos.html">Cursos</a>
+                <a href="contact.html" class="active">Contato</a>
+                <a href="sobre.html">Sobre Nós</a>
+            </nav>
+            <div class="header-icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="contact-page">
+        <!-- Seção Hero para Contato -->
+        <section class="contact-hero" style="background-image: url('img/fale.png');">
+            <div class="contact-hero-content">
+                <h1>FALE CONOSCO</h1>
+                <p>Estamos aqui para responder suas dúvidas e receber seu feedback</p>
+            </div>
+        </section>
+
+        <!-- Seção de Informações de Contato -->
+        <section class="contact-info-section">
+            <div class="container">
+                <div class="contact-info-grid">
+                    <div class="contact-info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>NOSSO ENDEREÇO</h3>
+                        <p>Av. Paulista, 1000<br>São Paulo - SP, 01310-000</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>TELEFONE</h3>
+                        <p>(11) 4004-2020<br>(11) 99999-9999 (WhatsApp)</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>E-MAIL</h3>
+                        <p>contato@salutianojoias.com.br<br>vendas@salutianojoias.com.br</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>HORÁRIO</h3>
+                        <p>Segunda a Sexta: 10h às 19h<br>Sábado: 10h às 16h</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Formulário e Mapa -->
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="contact-form-container">
+                    <div class="contact-form">
+                        <h2>ENVIE UMA MENSAGEM</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Seu telefone">
+                            </div>
+                            <div class="form-group">
+                                <select id="subject" name="subject" required>
+                                    <option value="" disabled selected>Selecione o assunto</option>
+                                    <option value="duvida">Dúvida sobre produtos</option>
+                                    <option value="orçamento">Orçamento</option>
+                                    <option value="troca">Troca ou devolução</option>
+                                    <option value="outro">Outro assunto</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Sua mensagem" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">ENVIAR MENSAGEM</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-map">
+                        <h2>ONDE ESTAMOS</h2>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.376415267987!2d-46.65823492468746!3d-23.56134757880096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59ceb1eb771f%3A0xe904f6a669744da1!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-000!5e0!3m2!1spt-BR!2sbr!4v1718812345678!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Perguntas Frequentes -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>PERGUNTAS FREQUENTES</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Como faço para comprar no site?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Navegue por nossas coleções, selecione os produtos desejados e adicione ao carrinho. No carrinho, você pode revisar seus itens e prosseguir para o checkout, onde preencherá seus dados e escolherá a forma de pagamento.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Quais são as formas de pagamento?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Aceitamos cartões de crédito (Visa, Mastercard, Elo), Pix, boleto bancário e transferência. Também oferecemos parcelamento em até 12x sem juros no cartão.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Qual o prazo de entrega?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O prazo de entrega varia conforme a região. Para a cidade de São Paulo, o prazo é de 2 a 3 dias úteis. Para outras localidades, de 5 a 10 dias úteis após a confirmação do pagamento.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Como funciona a troca ou devolução?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Você tem 7 dias corridos após o recebimento para solicitar troca ou devolução. O produto deve estar na embalagem original, sem sinais de uso e com a nota fiscal. Entre em contato conosco para iniciar o processo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>ASSINE NOSSA NEWSLETTER</h2>
+                    <p>Receba lançamentos exclusivos e convites para eventos</p>
+                    <form>
+                        <input type="email" placeholder="Seu melhor e-mail">
+                        <button type="submit">ASSINAR</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <h3>INFORMAÇÕES</h3>
+                    <ul>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="#">Nossas Lojas</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Trabalhe Conosco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>ATENDIMENTO</h3>
+                    <ul>
+                        <li><a href="#">Dúvidas Frequentes</a></li>
+                        <li><a href="#">Trocas e Devoluções</a></li>
+                        <li><a href="#">Formas de Pagamento</a></li>
+                        <li><a href="#">Entrega e Frete</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>CONTATO</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (11) 4004-2020</li>
+                        <li><i class="fas fa-envelope"></i> contato@salutianojoias.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>REDES SOCIAIS</h3>
+                    <div class="social-icons">
+          <a href="https://www.instagram.com/abnersalutianojoias/ " target="_blank" rel="external"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/abnersalutianojoias/" target="_blank" rel="external"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="https://www.youtube.com/@abnersalutiano49" target="_blank" rel="external"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Salutiano Joias. Todos os direitos reservados.</p>
+                <div class="payment-methods">
+                    <img src="img/visa%20cartao.png" alt="Visa">
+                    <img src="img/mastercard%20cartao.png" alt="Mastercard">
+                    <img src="img/elo%20cartao.png" alt="Elo">
+                    <img src="img/logo%20pix.png" alt="Pix">
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="js/script.js"></script>
+    <a href="https://api.whatsapp.com/send?phone=5521981389626" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+</a>
+</body>
+</html>

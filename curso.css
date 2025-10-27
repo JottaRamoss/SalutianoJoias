@@ -1,0 +1,432 @@
+/* === Reset básico === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    background-color: #534d3173;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==== HEADER ==== */
+.main-header {
+    background: #534d3173;
+    border-bottom: 1px solid #ffffff;
+    padding: 1rem 0;
+    position: relative;
+    top: 0;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+}
+
+.logo h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin: 0;
+  color: #222;
+}
+
+.logo span {
+  display: block;
+  font-size: 0.9rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* === MENU NAV === */
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.main-nav a:hover {
+  color: #c69c6d;
+}
+
+.main-nav a.active {
+  color: #c69c6d;
+  border-bottom: 2px solid #c69c6d;
+  padding-bottom: 2px;
+}
+
+/* === Ícones Header === */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header-icons a {
+    color: #333; /* Esta é a cor atual (cinza escuro) */
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.cart-count {
+  background-color: #333;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+/* === Seção de Cursos === */
+.courses-section {
+  background-color: #79776f73;
+  padding: 4rem 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+.section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #2c2c2c;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #666666;
+}
+
+.courses-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.course-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.course-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.course-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: #2c2c2c;
+  margin-bottom: 1rem;
+}
+
+.course-card p {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.course-button {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid #2c2c2c;
+  background-color: transparent;
+  color: #2c2c2c;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  border-radius: 5px;
+  align-self: flex-start;
+}
+
+.course-button:hover {
+  background-color: #2c2c2c;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* === NEWSLETTER === */
+.newsletter {
+  background: #f2f2f2;
+  padding: 3rem 5%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards 0.5s;
+}
+
+.newsletter-content h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-content form {
+  margin-top: 1rem;
+}
+
+.newsletter-content input {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  width: 250px;
+  max-width: 80%;
+  margin-right: 0.5rem;
+}
+
+.newsletter-content button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background: #b29477;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-content button:hover {
+  background: #a38466;
+}
+
+/* === FOOTER === */
+.main-footer {
+  background: #222;
+  color: #eee;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards 0.8s;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 3rem 5%;
+}
+
+.footer-column h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+  color: #eee;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #b29477;
+}
+
+.social-icons a {
+  color: #eee;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #b29477;
+}
+
+.footer-bottom {
+  background: #111;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #333;
+}
+
+.payment-methods img {
+  height: 25px;
+  width: auto;
+  margin-left: 0.5rem;
+}
+
+/* === BOTÃO HAMBURGUER === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.is-active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* === MOBILE NAV === */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60%;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease;
+    box-shadow: -3px 0 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  .main-nav.nav-open {
+    right: 0;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+
+  .courses-list {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}
+
+/* === WHATSAPP FLOAT BUTTON === */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s infinite;
+  transition: all 0.3s ease;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+.whatsapp-float i {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 25px;
+  }
+}
+
+/* === ANIMAÇÕES GERAIS === */
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
